@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" role="img" aria-label="Blender to Unity Pipeline Isometric Architecture Diagram">
+  <defs>
+    <pattern id="dotGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#334155" opacity="0.55" />
+    </pattern>
+    <marker id="arrowAmber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#facc15" />
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#4ade80" />
+    </marker>
+  </defs>
+
+  <!-- Technical Blueprint Frame -->
+  <rect x="6" y="6" width="948" height="348" rx="16" fill="#0f172a" stroke="#334155" stroke-width="2.5" />
+  <rect x="14" y="14" width="932" height="332" rx="12" fill="url(#dotGrid)" />
+
+  <!-- Top Plate Corners -->
+  <rect x="28" y="24" width="66" height="22" rx="4" fill="#facc15" />
+  <text x="61" y="39" text-anchor="middle" fill="#0f172a" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" font-weight="800">FIG 01</text>
+  <text x="108" y="39" fill="#e2e8f0" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="700" letter-spacing="1">BLENDER → PYTHON → UNITY PIPELINE ARCHITECTURE</text>
+  <text x="932" y="39" text-anchor="end" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">FBX / GLB · LOD0-2 · 2K PNG · &lt;50MB GIT</text>
+
+  <!-- Pipeline Connecting Buses -->
+  <path d="M 278 178 L 352 178" fill="none" stroke="#facc15" stroke-width="3" stroke-dasharray="6 4" marker-end="url(#arrowAmber)" />
+  <rect x="284" y="150" width="62" height="20" rx="4" fill="#1e293b" stroke="#facc15" stroke-width="1.2" />
+  <text x="315" y="164" text-anchor="middle" fill="#fde047" font-family="ui-monospace, monospace" font-size="9.5" font-weight="700">FBX / GLB</text>
+
+  <path d="M 606 178 L 680 178" fill="none" stroke="#4ade80" stroke-width="3" stroke-dasharray="6 4" marker-end="url(#arrowGreen)" />
+  <rect x="612" y="150" width="62" height="20" rx="4" fill="#1e293b" stroke="#4ade80" stroke-width="1.2" />
+  <text x="643" y="164" text-anchor="middle" fill="#86efac" font-family="ui-monospace, monospace" font-size="9.5" font-weight="700">2K PNG</text>
+
+  <!-- ==================== STATION 01: BLENDER ADD-ON ==================== -->
+  <g transform="translate(36, 72)">
+    <rect x="0" y="0" width="242" height="236" rx="12" fill="#1e293b" fill-opacity="0.72" stroke="#f97316" stroke-width="2" />
+    <rect x="12" y="12" width="128" height="20" rx="4" fill="#f97316" />
+    <text x="76" y="26" text-anchor="middle" fill="#0f172a" font-family="ui-monospace, monospace" font-size="10" font-weight="800">01 · BLENDER ADD-ON</text>
+
+    <!-- Isometric Base Plinth -->
+    <polygon points="121,158 186,124 121,92 56,124" fill="#334155" stroke="#0f172a" stroke-width="1.6" />
+    <polygon points="56,124 121,158 121,170 56,136" fill="#1e293b" stroke="#0f172a" stroke-width="1.6" />
+    <polygon points="186,124 121,158 121,170 186,136" fill="#0f172a" stroke="#0f172a" stroke-width="1.6" />
+
+    <!-- LOD0 / LOD1 / LOD2 Stacked Isometric Cubes -->
+    <!-- LOD0 Main Mesh -->
+    <polygon points="121,62 158,80 121,98 84,80" fill="#fb923c" stroke="#0f172a" stroke-width="1.6" />
+    <polygon points="84,80 121,98 121,134 84,116" fill="#f97316" stroke="#0f172a" stroke-width="1.6" />
+    <polygon points="158,80 121,98 121,134 158,116" fill="#ea580c" stroke="#0f172a" stroke-width="1.6" />
+    <!-- Wireframe Decimate Grid Lines on LOD0 -->
+    <polyline points="102,89 102,125" stroke="#ffedd5" stroke-width="1" opacity="0.6" />
+    <polyline points="140,89 140,125" stroke="#ffedd5" stroke-width="1" opacity="0.45" />
+    <polyline points="84,98 121,116 158,98" fill="none" stroke="#ffedd5" stroke-width="1" opacity="0.6" />
+
+    <!-- Floating LOD1 & LOD2 Mini Cubes -->
+    <polygon points="174,82 190,90 174,98 158,90" fill="#fde047" stroke="#0f172a" stroke-width="1.3" />
+    <polygon points="158,90 174,98 174,114 158,106" fill="#facc15" stroke="#0f172a" stroke-width="1.3" />
+    <polygon points="190,90 174,98 174,114 190,106" fill="#ca8a04" stroke="#0f172a" stroke-width="1.3" />
+
+    <!-- Station 01 Specs -->
+    <text x="16" y="194" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">unity_fbx_exporter.py</text>
+    <text x="16" y="210" fill="#cbd5e1" font-family="ui-monospace, monospace" font-size="10">• FBX (-Z Fwd, Y Up) &amp; GLB/glTF</text>
+    <text x="16" y="224" fill="#fdba74" font-family="ui-monospace, monospace" font-size="10">• Non-destructive _LOD0 / _LOD1 / _LOD2</text>
+  </g>
+
+  <!-- ==================== STATION 02: PYTHON TEXTURE OPTIMIZER ==================== -->
+  <g transform="translate(358, 72)">
+    <rect x="0" y="0" width="248" height="236" rx="12" fill="#1e293b" fill-opacity="0.72" stroke="#38bdf8" stroke-width="2" />
+    <rect x="12" y="12" width="144" height="20" rx="4" fill="#38bdf8" />
+    <text x="84" y="26" text-anchor="middle" fill="#0f172a" font-family="ui-monospace, monospace" font-size="10" font-weight="800">02 · PYTHON OPTIMIZER</text>
+
+    <!-- Isometric Compression Deck -->
+    <polygon points="124,158 192,124 124,90 56,124" fill="#334155" stroke="#0f172a" stroke-width="1.6" />
+    <polygon points="56,124 124,158 124,170 56,136" fill="#1e293b" stroke="#0f172a" stroke-width="1.6" />
+    <polygon points="192,124 124,158 124,170 192,136" fill="#0f172a" stroke="#0f172a" stroke-width="1.6" />
+
+    <!-- Oversized TGA Slab (Left) -->
+    <polygon points="94,76 124,91 94,106 64,91" fill="#fb7185" stroke="#0f172a" stroke-width="1.5" />
+    <polygon points="64,91 94,106 94,132 64,117" fill="#f43f5e" stroke="#0f172a" stroke-width="1.5" />
+    <polygon points="124,91 94,106 94,132 124,117" fill="#be123c" stroke="#0f172a" stroke-width="1.5" />
+    <text x="94" y="94" text-anchor="middle" fill="#fff1f2" font-family="ui-monospace, monospace" font-size="8.5" font-weight="800">TGA</text>
+
+    <!-- Optimized Compact PNG Slab (Right) -->
+    <polygon points="154,96 178,108 154,120 130,108" fill="#7dd3fc" stroke="#0f172a" stroke-width="1.5" />
+    <polygon points="130,108 154,120 154,132 130,120" fill="#38bdf8" stroke="#0f172a" stroke-width="1.5" />
+    <polygon points="178,108 154,120 154,132 178,120" fill="#0284c7" stroke="#0f172a" stroke-width="1.5" />
+    <text x="154" y="111" text-anchor="middle" fill="#0f172a" font-family="ui-monospace, monospace" font-size="8.5" font-weight="800">PNG</text>
+
+    <!-- Station 02 Specs -->
+    <text x="16" y="194" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">optimize_textures.py</text>
+    <text x="16" y="210" fill="#cbd5e1" font-family="ui-monospace, monospace" font-size="10">• Scan &gt;= N MB · Downscale 2048px</text>
+    <text x="16" y="224" fill="#7dd3fc" font-family="ui-monospace, monospace" font-size="10">• Verified by pytest + GitHub Actions CI</text>
+  </g>
+
+  <!-- ==================== STATION 03: UNITY EDITOR CHECKER ==================== -->
+  <g transform="translate(686, 72)">
+    <rect x="0" y="0" width="238" height="236" rx="12" fill="#1e293b" fill-opacity="0.72" stroke="#4ade80" stroke-width="2" />
+    <rect x="12" y="12" width="142" height="20" rx="4" fill="#4ade80" />
+    <text x="83" y="26" text-anchor="middle" fill="#0f172a" font-family="ui-monospace, monospace" font-size="10" font-weight="800">03 · UNITY SIZE GUARD</text>
+
+    <!-- Isometric Inspector Console -->
+    <polygon points="119,158 184,124 119,92 54,124" fill="#334155" stroke="#0f172a" stroke-width="1.6" />
+    <polygon points="54,124 119,158 119,170 54,136" fill="#1e293b" stroke="#0f172a" stroke-width="1.6" />
+    <polygon points="184,124 119,158 119,170 184,136" fill="#0f172a" stroke="#0f172a" stroke-width="1.6" />
+
+    <!-- Threshold Bar Gauge (Green OK / Amber 50MB / Red 100MB) -->
+    <polygon points="90,94 106,102 90,110 74,102" fill="#86efac" stroke="#0f172a" stroke-width="1.3" />
+    <polygon points="74,102 90,110 90,130 74,122" fill="#4ade80" stroke="#0f172a" stroke-width="1.3" />
+    <polygon points="106,102 90,110 90,130 106,122" fill="#16a34a" stroke="#0f172a" stroke-width="1.3" />
+
+    <polygon points="120,76 136,84 120,92 104,84" fill="#fde047" stroke="#0f172a" stroke-width="1.3" />
+    <polygon points="104,84 120,92 120,126 104,118" fill="#facc15" stroke="#0f172a" stroke-width="1.3" />
+    <polygon points="136,84 120,92 120,126 136,118" fill="#ca8a04" stroke="#0f172a" stroke-width="1.3" />
+
+    <polygon points="150,62 166,70 150,78 134,70" fill="#fda4af" stroke="#0f172a" stroke-width="1.3" />
+    <polygon points="134,70 150,78 150,122 134,114" fill="#fb7185" stroke="#0f172a" stroke-width="1.3" />
+    <polygon points="166,70 150,78 150,122 166,114" fill="#e11d48" stroke="#0f172a" stroke-width="1.3" />
+
+    <!-- Station 03 Specs -->
+    <text x="16" y="194" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">UnityAssetSizeChecker.cs</text>
+    <text x="16" y="210" fill="#cbd5e1" font-family="ui-monospace, monospace" font-size="10">• Flag 50 MB warn &amp; 100 MB block</text>
+    <text x="16" y="224" fill="#86efac" font-family="ui-monospace, monospace" font-size="10">• One-click select in Unity Assets/</text>
+  </g>
+
+  <!-- Bottom Footer Legend -->
+  <text x="36" y="332" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="10.5">ArdanR3/blender-unity-pipeline · Blender 3.6+ · Python 3.11+ · Unity Editor C#</text>
+  <text x="924" y="332" text-anchor="end" fill="#4ade80" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">CLEAN GIT REPO GUARANTEED</text>
+</svg>
